@@ -1,0 +1,175 @@
+/* Apply border-box sizing to all elements */
+*{
+    box-sizing: border-box;
+}
+
+/* Reset margin and padding for the entire document */
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif; /* Set the default font-family */
+}
+
+.container {
+    width: 550px;
+    height: 550px;
+    margin: auto;
+    box-shadow: 0px 4px 11px 0px rgba(0, 0, 0, 0.15);
+}
+
+.container,
+.dropdown-menu {
+    background: #1F2937;
+}
+
+.color-columns-container,
+.color-codes-container,
+.selection-box {
+    display: flex;
+}
+
+.color-codes-container,
+.selection-box {
+    align-items: center;
+}
+
+.selection-box {
+    height: 90px;
+    justify-content: center;
+    gap: 12px;
+}
+
+.selected-color {
+    width: 61px;
+    height: 43px;
+    border: 0.5px solid #D1D5DB;
+}
+
+/* Styling for the dropdown menu */
+.dropdown-toggle,
+.dropdown-menu  {
+    width: 312px;
+}
+
+.dropdown-toggle {
+    height: 42px;
+    padding: 9px 13px;
+    border-radius: 6px;
+    border: 1px solid #D1D5DB;
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+    line-height: 24px; 
+}
+
+.dropdown-toggle,
+.color-codes-container {
+    color: #D5D4D8;
+}
+
+/* .dropdown-toggle, */
+.dropdown-item,
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu,
+.dropdown-toggle::after,
+.dropdown-item.selected::after  {
+    position: absolute;
+}
+
+.dropdown-menu {
+    display: none;
+    height: 287px;
+    margin-top: 8px;
+    border-radius: 6px;
+    box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.10), 0px 4px 6px -2px rgba(0, 0, 0, 0.05), 0px 0px 0px 1px rgba(0, 0, 0, 0.05);
+}
+
+.dropdown-menu,
+.get-colorscheme-btn,
+.copied-message {
+    color: #FFF;
+}
+
+.dropdown-toggle::after {
+    height: 20px;
+    content: url('Selector.png');
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+}
+
+.dropdown-item {
+    margin: 0px 16px 16px 12px;
+    line-height: 24px; 
+}
+
+.dropdown-toggle,
+.dropdown-item,
+.get-colorscheme-btn
+.selected-color,
+.color-columns-container,
+.color-codes-container {
+    cursor: pointer;
+}
+
+.dropdown-item:first-child {
+    margin-top: 8px;
+}
+
+.dropdown-item:hover {
+    font-weight: 600;
+}
+
+.dropdown-item.selected::after {
+    content : url('Check.png');
+    right: 0; 
+    top: 20%;
+}
+
+.selected {
+    font-weight: 600;
+}
+
+/* Styling for the button */
+.get-colorscheme-btn {
+    font-family: Inter, sans-serif;
+    border-radius: 4px;
+    background: #3D4B60;
+    padding: 13px 11px;
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+    line-height: 16px;
+    border: none;
+}
+
+.get-colorscheme-btn,
+.color-codes-container {
+    font-size: 12px;
+}
+
+/* Styling for the color columns */
+.color-columns-container {
+    height: 414px;
+}
+
+.color-column {
+    width: 110px;
+}
+/* Styling for the color hex codes */
+.color-codes-container {
+    padding: 11px 28px;
+    gap: 56px;
+    height: 46px;
+}
+
+/* Styling for the copied message text */
+.copied-message {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px 20px;
+    border-radius: 5px;
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+        <!-- Metadata -->
+        <title>Color Scheme Generator</title>
+		<meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="An app for getting color scheme ideas">
+        <meta name="author" content="Color Scheme Generator App">
+        
+        <!-- Open Graph Protocol -->
+        <meta property="og:title" content="Generate Eye Catching Color Schemes">
+        <meta property="og:type" content="website">
+        <meta property="og:image" content="banner.png">
+        <meta property="og:url" content="https://colorshcemeapp.com">
+        <meta property="og:description" content="An app for generating color schemes for your projects e.g. website">
+        <meta property="og:locale" content="en_US">
+        <meta property="og:site_name" content="Color Scheme Generator">
+        
+		<!-- Tab icon -->
+        <link rel="icon" href="colorshceme.png">
+        
+         <!-- Inter Font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
+        
+        <!-- Link To Stylesheet -->
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <div class="container">
+            <header class="selection-box">
+                <input type="color" id="selected-color" class="selected-color" value="#F55A5A">
+                <div class="dropdown" id="mode-picker">
+                    <div class="dropdown-toggle">Monochrome</div>
+                    <div class="dropdown-menu">
+                        <div class="dropdown-item" data-value="monochrome">Monochrome</div>
+                        <div class="dropdown-item" data-value="monochrome-dark">Monochrome-dark</div>
+                        <div class="dropdown-item" data-value="monochrome-light">Monochrome-light</div>
+                        <div class="dropdown-item" data-value="analogic">Analogic</div>
+                        <div class="dropdown-item" data-value="complement">Complement</div>
+                        <div class="dropdown-item" data-value="analogic-complement">Analogic-complement</div>
+                        <div class="dropdown-item" data-value="triad">Triad</div>
+                    </div>
+                </div>
+            <button id="get-colorscheme-btn" class="get-colorscheme-btn">Get color scheme</button>
+            </header>
+            <main id="color-columns-container" class="color-columns-container"></main>
+            <footer id="color-codes-container" class="color-codes-container"></footer>
+        </div>
+        <script src="index.js"></script>
+    </body>
+</html>
